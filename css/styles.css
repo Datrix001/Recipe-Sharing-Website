@@ -1,31 +1,38 @@
 body{
     overflow-x: hidden;
-    font-family: "Ubuntu", sans-serif  ;
-}
-span{
+    font-family: "Ubuntu", sans-serif  ;}
+
+span {
     font-family: "Ubuntu", sans-serif;
     color: #52734D;
     font-weight: bolder;
     font-size: 2rem;
 }
-li{
-    color: #52734D ;
+
+li {
+    color: #52734D;
     font-size: 16px;
     font-family: "Anta", sans-serif;
 }
-.nav-link{
+
+.nav-link {
     color: #52734D !important;
     font-weight: 100;
     font-family: "Anta", sans-serif;
     font-size: larger;
-    
+    cursor: pointer;
 }
 
-
 .navbar {
-    background-color: #fff; /* Background color */
-    border-bottom: solid #52734D 2px;
-   
+    background-color: #fff;
+    /* Background color */
+    border-bottom: solid #52734D 5px;
+
+}
+span {
+    background: linear-gradient(to right, #52734D, #ADBC9F);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; 
 }
 .btn-shadow{
     border:solid #52734D ;
@@ -33,51 +40,18 @@ li{
 }
 .background-1{
     background-image: url("../images/230.jpg");
-    height: 700px;;
     background-repeat: no-repeat;
     background-size:contain;
-    position: relative;
-    
-}
-
-span {
-    background: linear-gradient(to right, #52734D, #ADBC9F);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text; 
+    /* width: 1600px; */
+    height: 650px;
 }
 h1{
     font-family: "Montserrat", sans-serif;
   font-size: 3.7rem !important;
   line-height: 1.5;
   font-weight: 1000;
-  margin-top: 100%;
+  margin-top: 20%;
   font-weight: 700 !important;
-}
-
-.one{
-    position: absolute;
-    bottom: 20%;
-}
-
-.btne {
-  background: #52734D;
-  border-radius: 999px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 19px;
-  font-weight: 700;
-  line-height: 24px;
-  opacity: 1;
-  outline: 0 solid transparent;
-  padding: 20px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  font-family: "Anta", sans-serif;
-  width: fit-content;
-  word-break: break-word;
-  border: 0; 
 }
 
 .second{
@@ -134,7 +108,7 @@ h3{
             background-color: green;
             transform: rotate(90deg);
     z-index: -1;
-    top: 130px;
+    top: 190px;
     right: -230px;
 }
 b{
@@ -145,12 +119,13 @@ b{
     padding-bottom:20px ;
 }  
 .about{
+    
     align-items: left;
     height: 600px;
     width: 600px;
     border-radius: 50%;   
     z-index: 1;
-    
+    margin-top: 60px;
 }
 .con{
     display: flex;
