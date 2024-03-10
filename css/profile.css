@@ -37,7 +37,7 @@ li{
 span {
     background: linear-gradient(to right, #52734D, #ADBC9F);
     -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text; 
+    /* -webkit-background-clip: text;  */
 }
 .profile{
     height: 30px;
