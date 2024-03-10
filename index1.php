@@ -1,7 +1,7 @@
 <?php
-
-    if(isset($_POST['name'])){    
     $pass = true;
+    if(isset($_POST['name'])){    
+    
     // Set Connection variable
     $server = "localhost";
     $username = "root";
@@ -39,10 +39,9 @@
         echo "ERROR: $sql <br> $conn->error";
     }
      $con-> close();  
-}}
-else{
+}else{
     $pass = false;
-}
+}}
 ?>
 <?php
     $log = true;
@@ -148,7 +147,7 @@ else{
                     echo"<style>.container{bottom:30px;}</style>";
             }
 
-            if($pass == false){
+            if(!$pass){
                     echo"<div class='alert alert-secondary bg-warning' role='alert'>
                         Confirm Password is not same as Password
                     </div>";
@@ -159,7 +158,7 @@ else{
         <div class="container">
             <div class="LeftSide">
                 <h2 class="leftH1">Login</h2>
-                <form action="index.php" method="post" class="form">
+                <form action="" method="post" class="form">
                     <input type="text" class="text-box" name="loginName" placeholder="User Name" required> <br>
                     <input type="password" class="text-box" name ="loginPassword" placeholder="Password" required> <br>
 
@@ -171,7 +170,7 @@ else{
             <div class="RightSide">
                 <h1 class="rightH2">Create Your Account</h1>
                 <p class="rightPara">by using email for registration</p>
-                <form action="index.php" method="post" class="rightForm">
+                <form action="" method="post" class="rightForm">
                     <input type="text" class="text-box" name ="name"placeholder="Name" required><br>
                     <input type="text" class="text-box" name = "email" placeholder="Email" required><br>
                     <input type="password" class="text-box" name = "password" placeholder="Password" required><br>

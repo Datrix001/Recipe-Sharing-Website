@@ -30,7 +30,7 @@ li {
 .navbar {
     background-color: #fff;
     /* Background color */
-    border-bottom: solid #52734D 5px;
+    border-bottom: solid #52734D 2px;
 
 }
 span {
@@ -65,12 +65,13 @@ span {
     right: 0;
     top: 39px;
     width: 50%;
-    height: 522px;
+    height: 544px;
     background-color: white;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     z-index: 0;
     text-align: left;
+    height: 544px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     
 }
@@ -79,7 +80,7 @@ span {
 .content {
     position: relative;
     background-color: #39A999;
-    height: 524px;
+    height: 544px;
     bottom: 500px !important;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;

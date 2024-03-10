@@ -42,19 +42,19 @@
             <a class="navbar-brand" href="#"> <span><img src="images/chef-hat.ico" alt=""> FlavorForge</span></a>
             <ul class="navbar-nav ms-lg-auto pe-xxl-3 ">
                 <li class="nav-item px-2 ">
-                    <a class="nav-link active" href="www.google.com">Home</a>
+                    <a class="nav-link active" href="#">Home</a>
                 </li>
                 <li class="nav-item px-2 ">
-                    <a class="nav-link active" href="">Recipes</a>
+                    <a class="nav-link active" href="#">Recipes</a>
                 </li>
                 <li class="nav-item  px-2 ">
-                    <a class="nav-link active" href="">Contact Us</a>
+                    <a class="nav-link active" href="#">Contact Us</a>
                 </li>
                 <li class="nav-item  px-2">
-                    <a class="nav-link active" href="index.php">Sign Up</a>
+                    <a class="nav-link active" href="index1.php">Sign Up</a>
                 </li>
                 <li class="nav-item btn-shadow px-2 ms-3">
-                    <a class="nav-link active" href="www.google.com" target="_blank">Login</a>
+                    <a class="nav-link active" href="index1.php" >Login</a>
                 </li>
             </ul>
         </div>
