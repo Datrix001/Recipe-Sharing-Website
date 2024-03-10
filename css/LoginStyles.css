@@ -1,0 +1,186 @@
+body {
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
+    color: gray;
+    background-image: url("../images/6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+span {
+    font-family: "Ubuntu", sans-serif;
+    color: #52734D;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+li {
+    color: #52734D;
+    font-size: 16px;
+    font-family: "Anta", sans-serif;
+}
+
+.nav-link {
+    color: #52734D !important;
+    font-weight: 100;
+    font-family: "Anta", sans-serif;
+    font-size: larger;
+}
+
+.navbar {
+    background-color: #fff;
+    /* Background color */
+    border-bottom: solid #52734D 5px;
+
+}
+span {
+    background: linear-gradient(to right, #52734D, #ADBC9F);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; 
+}
+
+.container {
+    height: 80vh;
+    width: 70%;
+    display: flex;
+    text-align: center;
+    position: relative;
+    box-shadow: 5px;
+}
+
+.LeftSide {
+    position: relative;
+    width: 50%;
+    text-align: left;
+    padding: 50px;
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-top: 39px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    
+}
+.RightSide {
+    position: absolute;
+    right: 0;
+    top: 39px;
+    width: 50%;
+    height: 522px;
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 0;
+    text-align: left;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+
+.content {
+    position: relative;
+    background-color: #39A999;
+    height: 524px;
+    bottom: 500px !important;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 1;
+    text-align: center;
+    transition: all 2s ease-in-out;
+}
+
+.content.active1 {
+    transform: translateX(-100%);
+    border-radius: 20px 0 0 20px;
+}
+.contentp{
+    color: white;
+}
+h1 {
+    font-family: "Montserrat", sans-serif;
+}
+
+h5 {
+    padding-bottom: 40px;
+}
+
+.leftH1 {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: black;
+    
+}
+
+.rightH1 {
+    padding-top: 180px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+.rightH2{
+    padding-top: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+}
+
+i {
+    margin-left: 10px;
+    font-style: normal;
+}
+
+.text-box {
+    margin: 10px;
+    width: 310px;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: 0;
+    background: transparent;
+}
+
+input {
+    margin: 10px;
+}
+.submit{
+    margin-top: 40px;
+    margin-left: 30px;
+}
+button {
+    margin-left: 10px;
+    width: 270px;
+    height: 40px;
+    background-color:#39A999;
+    color: white;
+    border-radius: 30px;
+    border: solid white 2px;
+}
+
+form {
+    margin-bottom: 15px;
+    padding: 6px;
+}
+.rightForm{
+    padding-left: 100px;
+}
+#sd{
+    margin-top: 15px;
+}
+p{
+    margin-bottom: 0px !important;
+}
+.rightPara {
+    text-align: center;
+    margin-bottom: 0px;
+}
+.content2 {
+    display: none;
+}
+
+
+
+
