@@ -72,6 +72,7 @@
             $log = false;
         }else{
             $_SESSION['UNIQUE_ID'] = $row['UNIQUE_ID']; 
+            header("Location: afterLogin.php");
         }
         
         $con-> close();  
@@ -121,7 +122,7 @@
             <a class="navbar-brand" href="#"> <span><img src="images/chef-hat.ico" alt=""> FlavorForge</span></a>
             <ul class="navbar-nav ms-lg-auto pe-xxl-3 ">
                 <li class="nav-item px-2 ">
-                    <a class="nav-link active" href="">Home</a>
+                    <a class="nav-link active" href="index.php">Home</a>
                 </li>
                 <li class="nav-item px-2 ">
                     <a class="nav-link active" href="">Recipes</a>
@@ -130,10 +131,10 @@
                     <a class="nav-link active" href="">Contact Us</a>
                 </li>
                 <li class="nav-item  px-2">
-                    <a class="nav-link active" href="">Sign Up</a>
+                    <a class="nav-link active" href="#">Sign Up</a>
                 </li>
                 <li class="nav-item btn-shadow px-2 ms-3">
-                    <a class="nav-link active" href="">Login</a>
+                    <a class="nav-link active" href="#">Login</a>
                 </li>
             </ul>
         </div>
@@ -166,6 +167,9 @@
                     <button type="submit" class="submit">Submit</button>
                 </form>
             </div>
+            <?php
+
+            ?>
             
             <div class="RightSide">
                 <h1 class="rightH2">Create Your Account</h1>
