@@ -2,9 +2,9 @@ body {
     overflow-x: hidden;
     font-family: "Montserrat", sans-serif;
     color: gray;
-    background-image: url("../images/6.jpg");
+    /* background-image: url("../images/6.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 span {
@@ -52,6 +52,7 @@ span {
     position: relative;
     width: 50%;
     text-align: left;
+    height: 544px;
     padding: 50px;
     background-color: white;
     border-top-left-radius: 20px;
