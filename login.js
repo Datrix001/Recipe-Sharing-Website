@@ -18,3 +18,8 @@ document.querySelector('#sd').addEventListener("click", () => {
     },1900);
   }
 });
+
+// document.querySelector('#signup').addEventListener('DOMContentLoaded',moverr);
+// function moverr(){
+//   document.querySelector('content').classList.add('active1');
+// }

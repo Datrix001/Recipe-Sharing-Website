@@ -62,7 +62,7 @@
                     <a class="nav-link active" href="">Contact Us</a>
                 </li>
                 <li class="nav-item  px-2 mt-2">
-                    <img src="images/profile.png" alt="" class="profile">
+                    <a href="profile.php"><img src="images/profile.png" alt="" class="profile"></a>
                 </li>
                 <li class="nav-item px-2 mt-2 ">
                     <b class="size"><?php  echo $row['Name']; ?></b>

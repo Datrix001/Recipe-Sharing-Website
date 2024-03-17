@@ -131,7 +131,7 @@
                     <a class="nav-link active" href="">Contact Us</a>
                 </li>
                 <li class="nav-item  px-2">
-                    <a class="nav-link active" href="#">Sign Up</a>
+                    <a class="nav-link active" href="" id ="signup">Sign Up</a>
                 </li>
                 <li class="nav-item btn-shadow px-2 ms-3">
                     <a class="nav-link active" href="#">Login</a>
@@ -197,6 +197,6 @@
             
         </div>
     <script src="login.js"></script>  
-
+    <!-- <script src="home.js"></script>   -->
 </body>
 </html>
