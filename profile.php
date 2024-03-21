@@ -53,13 +53,13 @@
             <a class="navbar-brand" href="#"> <span><img src="images/chef-hat.ico" alt=""> FlavorForge</span></a>
             <ul class="navbar-nav ms-lg-auto pe-xxl-3 ">
                 <li class="nav-item px-2 ">
-                    <a class="nav-link active" href="">Home</a>
+                    <a class="nav-link active" href="index.php">Home</a>
                 </li>
                 <li class="nav-item px-2 ">
                     <a class="nav-link active" href="">Recipes</a>
                 </li>
                 <li class="nav-item  px-2 ">
-                    <a class="nav-link active" href="">Contact Us</a>
+                    <a class="nav-link active" href="contact.php">Contact Us</a>
                 </li>
                 <li class="nav-item  px-2 mt-2">
                     <img src="images/profile.png" alt="" class="profile">
@@ -78,10 +78,11 @@
             Name <br><input type="text" placeholder="<?php echo $row ['Name']; ?>" disabled><br>
             Date of Birth <br><input type="date" ><br>
             Email <br><input type="text" placeholder="<?php echo $row ['Email']; ?>" disabled><br>
-            About <br> <input type="text" name="about" id="about" ><br>
-            <input type="submit" class= "button">
-
+            About <br><textarea name="about" id="about" cols="30" rows="10" placeholder = "About Yourself"></textarea><br>
+            
+            <input type="submit" class= "sub" id= "ee">
         </form>
+        <button class="lo">Logout</button>
     </div>
 
 </body>

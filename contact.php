@@ -21,7 +21,7 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel="stylesheet" href="css/profile.css">
+<link rel="stylesheet" href="css/contact.css">
 <!-- Linking Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,21 +71,21 @@
         </div>
     </nav>
     <div class = "container">
-        <div class= "forum"><h2>Contact Us</h2>
-        <p>Feel free to contact us any time. We will get <br>
-        back to you as we can!</p>
-        <form action="">
-            <input type="text" class = "box "placeholder = "<?php  echo $row['Name']; ?>" disabled><br>
-            <input type="text" class = "box "placeholder = "<?php  echo $row['Email']; ?>" disabled><br>
-            <input type="text" class = "box"placeholder = "Message"><br>
-            <input type="submit" placeholder = "SEND">
-        </form>
+        <div class= "forum"><h2 class="topic">Contact Us</h2>
+            <p class="topic">Feel free to contact us any time. We will get <br>
+            back to you as we can!</p>
+            <form action="" class="mess">
+                <input type="text" placeholder = "<?php  echo $row['Name']; ?>" disabled class ="fStyle" > <br>
+                <input type="text" placeholder = "<?php  echo $row['Email']; ?>" disabled class ="fStyle" ><br>
+                <input type="text" placeholder = "Message" class ="fStyle" ><br>
+                <input type="submit" class='submit' value = "SEND" >
+            </form>
         </div>
         <div class = "info">
-            <h2>Info</h2>
-            flavourforge@gmail.com <br>
-            +91 9356798742 <br>
-            Model Colony, Shivajinagar, Pune
+            <h3>Info</h3>
+            <h6><img src="images/email.png" alt="" class= "profile">&nbsp &nbspflavourforge@gmail.com</h6> <br>
+            <h6><img src="images/phone.png" alt="" class= "profile">&nbsp &nbsp +91 9356798742 </h6><br>
+            <h6><img src="images/building.png" alt="" class= "profile">&nbsp &nbspModel Colony, Shivajinagar, Pune</h6>
         </div>
     </div>
 </body>

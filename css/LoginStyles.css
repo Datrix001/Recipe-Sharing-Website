@@ -1,10 +1,9 @@
 body {
     overflow-x: hidden;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Ubuntu", sans-serif;
     color: gray;
-    /* background-image: url("../images/6.jpg");
-    background-repeat: no-repeat;
-    background-size: cover; */
+    background-image: url("../images/233.jpg");
+    background-size: cover;
 }
 
 span {
@@ -79,9 +78,9 @@ span {
 
 .content {
     position: relative;
-    background-color: #39A999;
+    background-color: #52734D;
     height: 544px;
-    bottom: 500px !important;
+    bottom: 509px !important;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     z-index: 1;
@@ -108,10 +107,11 @@ h5 {
     text-align: center;
     padding-top: 50px;
     padding-bottom: 10px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
+    padding-right: 20px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bolder;
     color: black;
-    
+    font-size: 50px;
 }
 
 .rightH1 {
@@ -123,10 +123,11 @@ h5 {
 }
 .rightH2{
     padding-top: 40px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-weight: 700;
     color: black;
     text-align: center;
+    margin-bottom:0;
 }
 
 i {
@@ -155,7 +156,7 @@ button {
     margin-left: 10px;
     width: 270px;
     height: 40px;
-    background-color:#39A999;
+    background-color:#52734D;
     color: white;
     border-radius: 30px;
     border: solid white 2px;
@@ -165,7 +166,11 @@ form {
     margin-bottom: 15px;
     padding: 6px;
 }
+.form{
+    padding: 20px;
+}
 .rightForm{
+    padding-top: 20px;
     padding-left: 100px;
 }
 #sd{
@@ -177,6 +182,8 @@ p{
 .rightPara {
     text-align: center;
     margin-bottom: 0px;
+    font-size: large;
+    padding-top: 0;
 }
 .content2 {
     display: none;
