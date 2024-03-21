@@ -59,7 +59,7 @@
                     <a class="nav-link active" href="">Recipes</a>
                 </li>
                 <li class="nav-item  px-2 ">
-                    <a class="nav-link active" href="">Contact Us</a>
+                    <a class="nav-link active" href="contact.php">Contact Us</a>
                 </li>
                 <li class="nav-item  px-2 mt-2">
                     <a href="profile.php"><img src="images/profile.png" alt="" class="profile"></a>

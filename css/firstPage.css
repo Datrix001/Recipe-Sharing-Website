@@ -10,7 +10,7 @@ span {
 }
 
 li {
-    color: #52734D;
+    color: #52734D !important;
     font-size: 16px;
     font-family: "Anta", sans-serif;
 }
@@ -41,7 +41,7 @@ span {
 .size{
     font-size: 20px;
     text-decoration: none;
-    
+    color: #52734D !important;
 }
 .btne{
     border-radius: 30px;

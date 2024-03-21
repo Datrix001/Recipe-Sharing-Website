@@ -82,6 +82,7 @@ h3{
     border: 0;
     border-bottom: 2px solid gray;
     background-color: #fff;
+    outline: 0;
 }
 
 .forum{

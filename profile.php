@@ -53,7 +53,7 @@
             <a class="navbar-brand" href="#"> <span><img src="images/chef-hat.ico" alt=""> FlavorForge</span></a>
             <ul class="navbar-nav ms-lg-auto pe-xxl-3 ">
                 <li class="nav-item px-2 ">
-                    <a class="nav-link active" href="index.php">Home</a>
+                    <a class="nav-link active" href="afterLogin.php">Home</a>
                 </li>
                 <li class="nav-item px-2 ">
                     <a class="nav-link active" href="">Recipes</a>
@@ -82,7 +82,7 @@
             
             <input type="submit" class= "sub" id= "ee">
         </form>
-        <button class="lo">Logout</button>
+        <a href="logout.php"><button class="lo" target="logout.php">Logout</button></a>
     </div>
 
 </body>

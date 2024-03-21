@@ -39,19 +39,19 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg p-3 ">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"> <span><img src="images/chef-hat.ico" alt=""> FlavorForge</span></a>
+            <a class="navbar-brand" href=""> <span><img src="images/chef-hat.ico" alt=""> FlavorForge</span></a>
             <ul class="navbar-nav ms-lg-auto pe-xxl-3 ">
                 <li class="nav-item px-2 ">
-                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link active" href="">Home</a>
                 </li>
                 <li class="nav-item px-2 ">
-                    <a class="nav-link active" href="#">Recipes</a>
+                    <a class="nav-link active" href="">Recipes</a>
                 </li>
                 <li class="nav-item  px-2 ">
-                    <a class="nav-link active" href="#">Contact Us</a>
+                    <a class="nav-link active" href="contact1.php">Contact Us</a>
                 </li>
                 <li class="nav-item  px-2">
-                    <a class="nav-link active" href=""  id ="sign"><i >Sign Up</i></a>
+                    <a class="nav-link active" href="index1.php"  id ="sign"><i >Sign Up</i></a>
                 </li>
                 <li class="nav-item btn-shadow px-2 ms-3">
                     <a class="nav-link active" href="index1.php" >Login</a>
@@ -75,10 +75,10 @@
             <div class="semi"></div>
             <img src="images/114-modified.png" alt="" class="about">
         </div>
-        <p class="para"><b>About Us </b><br>Welcome to [Your Website Name], where food enthusiasts unite to share, discover, and delight in the world of cooking.
+        <p class="para"><b>About Us </b><br>Welcome to Flavour Forge, where food enthusiasts unite to share, discover, and delight in the world of cooking.
         From seasoned chefs to kitchen novices, our platform invites everyone to explore recipes, exchange ideas, and connect
-        with like-minded individuals. Founded on the belief that food has the power to create connections and moments, [Your
-        Website Name] is a hub for culinary inspiration and community collaboration. Join us on this delicious journey as we
+        with like-minded individuals. Founded on the belief that food has the power to create connections and moments, Flavour
+        Forge is a hub for culinary inspiration and community collaboration. Join us on this delicious journey as we
         celebrate the joy of cooking and the richness of food culture together. Thank you for being a part of our vibrant
         community. Let's cook, create, and savor the magic of food together!</p>
     </div>

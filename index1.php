@@ -26,7 +26,7 @@
 
     if ($passw == $confirm_password){
 
-    $random_num = rand(100000000,999999999999);    
+    $random_num = rand(1000000,99999999);    
     $sql = "INSERT INTO `logintable`.`reg` ( `Name`, `Email`, `Password`, `Confirm_Password`, `Date_Time`,`UNIQUE_ID`) VALUES ('$name', '$email', '$passw', '$confirm_password', current_timestamp(),$random_num);";
     
     //execute the query
@@ -128,13 +128,13 @@
                     <a class="nav-link active" href="">Recipes</a>
                 </li>
                 <li class="nav-item  px-2 ">
-                    <a class="nav-link active" href="">Contact Us</a>
+                    <a class="nav-link active" href="contact.php">Contact Us</a>
                 </li>
                 <li class="nav-item  px-2">
                     <a class="nav-link active" href="" id ="signup">Sign Up</a>
                 </li>
                 <li class="nav-item btn-shadow px-2 ms-3">
-                    <a class="nav-link active" href="#">Login</a>
+                    <a class="nav-link active" href="">Login</a>
                 </li>
             </ul>
         </div>
@@ -155,6 +155,13 @@
                     echo"<style>.alert{margin-bottom:0;}</style>";
                     echo"<style>.container{bottom:30px;}</style>";
             }
+            if($pass == true){
+                    echo"<div class='alert alert-secondary bg-info' role='alert'>
+                        Congratulation!! Account Created.
+                    </div>";
+                    echo"<style>.alert{margin-bottom:0;}</style>";
+                    echo"<style>.container{bottom:30px;}</style>";
+            }
             ?>
         <div class="container">
             <div class="LeftSide">
@@ -163,7 +170,7 @@
                     <input type="text" class="text-box" name="loginName" placeholder="User Name" required> <br>
                     <input type="password" class="text-box" name ="loginPassword" placeholder="Password" required> <br>
 
-                    <input type="checkbox" required>Remember Me  <br>
+                    <input type="checkbox">Remember Me  <br>
                     <button type="submit" class="submit">Submit</button>
                 </form>
             </div>
