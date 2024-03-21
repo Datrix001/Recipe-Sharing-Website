@@ -1,5 +1,6 @@
 <?php
     $pass = true;
+    $acc = false;
     if(isset($_POST['name'])){    
     
     // Set Connection variable
@@ -38,6 +39,7 @@
     else{
         echo "ERROR: $sql <br> $conn->error";
     }
+    $acc = true;
      $con-> close();  
 }else{
     $pass = false;
@@ -155,7 +157,7 @@
                     echo"<style>.alert{margin-bottom:0;}</style>";
                     echo"<style>.container{bottom:30px;}</style>";
             }
-            if($pass == true){
+            if($acc == true){
                     echo"<div class='alert alert-secondary bg-info' role='alert'>
                         Congratulation!! Account Created.
                     </div>";
