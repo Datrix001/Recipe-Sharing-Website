@@ -52,8 +52,8 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#"> <span><img src="images/chef-hat.ico" alt=""> FlavorForge</span></a>
             <ul class="navbar-nav ms-lg-auto pe-xxl-3 ">
-                <li class="nav-item px-2 ">
-                    <a class="nav-link active" href="">Home</a>
+                <li class="nav-item px-2 active1">
+                    <a class="nav-link active li" href="">Home</a>
                 </li>
                 <li class="nav-item px-2 ">
                     <a class="nav-link active" href="">Recipes</a>
@@ -62,11 +62,11 @@
                     <a class="nav-link active" href="contact.php">Contact Us</a>
                 </li>
                 <li class="nav-item  px-2 mt-2">
-                    <a href="profile.php"><img src="images/profile.png" alt="" class="profile"></a>
+                    <a href="profile.php"><img src="images/chef1.png" alt="" class="profile"></a>
                 </li>
-                <li class="nav-item px-2 mt-2 ">
+                <!-- <li class="nav-item px-2 mt-2 ">
                     <b class="size"><?php  echo $row['Name']; ?></b>
-                </li>
+                </li> -->
             </ul>
         </div>
     </nav>

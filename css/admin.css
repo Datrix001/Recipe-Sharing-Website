@@ -1,0 +1,51 @@
+body{
+    overflow-x: hidden;
+    font-family: "Ubuntu", sans-serif  ;
+    background-image: url("../images/233.jpg");
+    background-size: cover;
+}
+span{
+    font-family: "Ubuntu", sans-serif;
+    color: #52734D;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+li{
+    color: #52734D ;
+    font-size: 16px;
+    font-family: "Anta", sans-serif;
+}
+.size{
+    font-size: 20px;
+    text-decoration: none;
+    
+}
+.nav-link{
+    color: #52734D !important;
+    font-weight: 100;
+    font-family: "Anta", sans-serif;
+    font-size: larger;
+    
+}
+.navbar {
+    background-color: #fff; /* Background color */
+    border-bottom: solid #52734D 2px;
+   
+}
+
+.active1{
+    background-color: #52734D;
+    border-radius: 20px;
+}
+
+.li{
+    color: #fff !important;
+}
+span {
+    background: linear-gradient(to right, #52734D, #ADBC9F);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; 
+}
+.profile{
+    height: 30px;
+}

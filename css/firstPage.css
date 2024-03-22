@@ -22,7 +22,13 @@ li {
     font-size: larger;
     cursor: pointer;
 }
-
+.active1{
+    background-color: #52734D;
+    border-radius: 20px;
+}
+.li{
+    color: #fff !important;
+}
 .navbar {
     background-color: #fff;
     /* Background color */

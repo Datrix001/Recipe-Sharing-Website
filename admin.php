@@ -58,11 +58,11 @@
                 <li class="nav-item px-2 ">
                     <a class="nav-link active" href="">Recipes</a>
                 </li>
-                <li class="nav-item  px-2 ">
-                    <a class="nav-link active" href="contact.php">Contact Us</a>
+                <li class="nav-item  px-2 active1">
+                    <a class="nav-link active li" href="">Contact Us</a>
                 </li>
                 <li class="nav-item  px-2 mt-2">
-                    <img src="images/chef1.png" alt="" class="profile">
+                    <a href="profile.php"><img src="images/chef1.png" alt="" class="profile"></a>
                 </li>
                 <!-- <li class="nav-item px-2 mt-2 ">
                     <b class="size"><?php  echo $row['Name']; ?></b>
@@ -70,20 +70,3 @@
             </ul>
         </div>
     </nav>
-
-    <div class = "container">
-        <h1 class="h1">Personal Information</h1>
-        <img src="images/user.png" alt="" class = "img1">
-        <form action="" method ="post"  class = "forum">
-            Name <br><input type="text" placeholder="<?php echo $row ['Name']; ?>" disabled><br>
-            Date of Birth <br><input type="date" ><br>
-            Email <br><input type="text" placeholder="<?php echo $row ['Email']; ?>" disabled><br>
-            About <br><textarea name="about" id="about" cols="30" rows="10" placeholder = "About Yourself"></textarea><br>
-            
-            <input type="submit" class= "sub" id= "ee">
-        </form>
-        <a href="logout.php"><button class="lo" target="logout.php">Logout</button></a>
-    </div>
-
-</body>
-</html>

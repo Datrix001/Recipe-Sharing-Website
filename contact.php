@@ -58,15 +58,15 @@
                 <li class="nav-item px-2 ">
                     <a class="nav-link active" href="">Recipes</a>
                 </li>
-                <li class="nav-item  px-2 ">
-                    <a class="nav-link active" href="">Contact Us</a>
+                <li class="nav-item  px-2 active1">
+                    <a class="nav-link active li" href="">Contact Us</a>
                 </li>
                 <li class="nav-item  px-2 mt-2">
-                    <a href="profile.php"><img src="images/profile.png" alt="" class="profile"></a>
+                    <a href="profile.php"><img src="images/chef1.png" alt="" class="profile"></a>
                 </li>
-                <li class="nav-item px-2 mt-2 ">
+                <!-- <li class="nav-item px-2 mt-2 ">
                     <b class="size"><?php  echo $row['Name']; ?></b>
-                </li>
+                </li> -->
             </ul>
         </div>
     </nav>

@@ -105,7 +105,8 @@
 
             </div>
         </div>
-    </div>    
+    </div>
+
     <div class="third">
         <div class="col-lg-4 px-3 pt-0 ">
             <h1 class="gghg">Contact Us</h1>
@@ -130,7 +131,9 @@
             </h3>
         </div>
     </div>
-    
+
+
+       
     <script src="home.js"></script>  
 </body>
 
