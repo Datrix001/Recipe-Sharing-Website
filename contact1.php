@@ -36,8 +36,8 @@
                 <li class="nav-item px-2 ">
                     <a class="nav-link active" href="">Recipes</a>
                 </li>
-                <li class="nav-item  px-2 ">
-                    <a class="nav-link active" href="">Contact Us</a>
+                <li class="nav-item  px-2 active1 ">
+                    <a class="nav-link active li" href="">Contact Us</a>
                 </li>
                 <li class="nav-item  px-2">
                     <a class="nav-link active" href="index1.php"  id ="sign"><i >Sign Up</i></a>

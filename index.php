@@ -41,8 +41,8 @@
         <div class="container-fluid">
             <a class="navbar-brand" href=""> <span><img src="images/chef-hat.ico" alt=""> FlavorForge</span></a>
             <ul class="navbar-nav ms-lg-auto pe-xxl-3 ">
-                <li class="nav-item px-2 ">
-                    <a class="nav-link active" href="">Home</a>
+                <li class="nav-item px-2 active1 ">
+                    <a class="nav-link active li" href="">Home</a>
                 </li>
                 <li class="nav-item px-2 ">
                     <a class="nav-link active" href="">Recipes</a>

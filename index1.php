@@ -130,13 +130,13 @@
                     <a class="nav-link active" href="">Recipes</a>
                 </li>
                 <li class="nav-item  px-2 ">
-                    <a class="nav-link active" href="contact.php">Contact Us</a>
+                    <a class="nav-link active" href="contact1.php">Contact Us</a>
                 </li>
-                <li class="nav-item  px-2">
-                    <a class="nav-link active" href="" id ="signup">Sign Up</a>
+                <li class="nav-item  px-2 back1">
+                    <a class="nav-link active lin1" href="" id ="signup">Sign Up</a>
                 </li>
-                <li class="nav-item btn-shadow px-2 ms-3">
-                    <a class="nav-link active" href="">Login</a>
+                <li class="nav-item btn-shadow px-2 ms-3 back active2">
+                    <a class="nav-link active lin active3" href="">Login</a>
                 </li>
             </ul>
         </div>

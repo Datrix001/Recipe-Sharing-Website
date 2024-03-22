@@ -42,7 +42,31 @@ span {
     -webkit-background-clip: text; 
 }
 h1{
-    color:blueviolet;
+    color:#52734D;
     text-align: center;
-    margin-top: 400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+}
+.container{
+
+    height: 300px;
+    width: 500px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-top: 200px;
+}
+
+button{
+    position: relative;
+    left: 170px;
+    top: 20px;
+    color: #52734D;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: solid #52734D 3px ;
+    
 }

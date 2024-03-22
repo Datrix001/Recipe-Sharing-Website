@@ -32,9 +32,14 @@ li{
     border-bottom: solid #52734D 2px;
    
 }
-.btn-shadow{
-    border:solid #52734D ;
+
+.active1{
+    background-color: #52734D;
     border-radius: 20px;
+}
+
+.li{
+    color: #fff !important;
 }
 span {
     background: linear-gradient(to right, #52734D, #ADBC9F);

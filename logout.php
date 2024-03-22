@@ -51,17 +51,18 @@
                     <a class="nav-link active" href="contact.php">Contact Us</a>
                 </li>
                 <li class="nav-item  px-2">
-                    <a class="nav-link active" href="" id ="signup">Sign Up</a>
+                    <a class="nav-link active" href="index1.php" id ="signup">Sign Up</a>
                 </li>
                 <li class="nav-item btn-shadow px-2 ms-3">
-                    <a class="nav-link active" href="">Login</a>
+                    <a class="nav-link active" href="index1.php">Login</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-
-    <h1>You have been logged out!!</h1>
-
+    <div class="container">
+        <h1>You have been logged out!!</h1>
+        <a href="index1.php"><button>Log Back In</button></a>
+    </div>
 </body>
 </html>

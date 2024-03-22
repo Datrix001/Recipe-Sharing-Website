@@ -37,6 +37,33 @@ span {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text; 
 }
+.back1.active2{
+    background-color: #52734D;
+    border-radius: 20px;
+}
+
+ back1.lin1 {
+  transition: background-color 2s ease-in-out;
+}
+.back.active2 {
+  background-color: #52734D;
+}
+
+back.lin{
+  transition: background-color 2s ease-in-out;
+}
+
+.lin1.active3{
+    color: #fff !important;
+}
+.active2{
+    background-color: #52734D;
+    border-radius: 20px;
+}
+
+.active3{
+    color: #fff !important;
+}
 
 .container {
     height: 80vh;
@@ -57,7 +84,7 @@ span {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     margin-top: 39px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.8);
     
 }
 .RightSide {
