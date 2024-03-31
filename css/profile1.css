@@ -1,0 +1,129 @@
+body{
+    overflow-x: hidden;
+    font-family: "Ubuntu", sans-serif  ;
+}
+span{
+    font-family: "Ubuntu", sans-serif;
+    color: #52734D;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+li{
+    color: #52734D ;
+    font-size: 16px;
+    font-family: "Anta", sans-serif;
+}
+.size{
+    font-size: 20px;
+    text-decoration: none;
+    
+}
+.nav-link{
+    color: #52734D !important;
+    font-weight: 100;
+    font-family: "Anta", sans-serif;
+    font-size: larger;
+    
+}
+.navbar {
+    background-color: #fff; /* Background color */
+    border-bottom: solid #52734D 2px;
+   
+}
+.btn-shadow{
+    border:solid #52734D ;
+    border-radius: 20px;
+}
+span {
+    background: linear-gradient(to right, #52734D, #ADBC9F);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; 
+}
+.profile{
+    height: 30px;
+}
+.container{
+    height: 610px;
+    width: 100%;
+    margin: 0;
+    padding:0;
+    
+}
+.column1{
+    float: left;
+    height: 610px;
+    width: 30%;
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.2);
+    overflow-y: hidden;
+}
+.img1{
+    height: 140px;
+    border-radius: 100%;
+    margin-top: 30px;
+    margin-left: 90px;
+    
+    float: left;
+}
+
+.column2{
+   position: relative;
+   height: 610px;
+   width: 70%; 
+   
+}
+.topic1{
+    position: relative;
+    left: 100px;
+    top:  50px;
+}
+.name{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 60px;
+    font-weight: 600;
+}
+h4{
+    margin-bottom: 30;
+    padding: 5 50px 0 10;
+    margin-left: 30px;
+    border-right:red solid 4px ;
+    font-weight: 500;
+    
+}
+.h4{
+    margin-bottom: 30;
+    margin-left: 30px;
+    padding: 5 50px 0 10;
+    border-color: #fff;
+    color: gray;
+    font-weight: 380;
+}
+.h5{
+    margin-top: 200px;
+    margin-left: 30px;
+    color: red;
+    text-shadow: 2px 2px 5px red;
+}
+.img{
+    height: 28px;
+    float: left;
+}
+.row{
+    height: 300px;
+    width: 900px;
+    position: relative;
+    bottom: 400px;
+    left: 540px;
+}
+.save{
+    position: relative;
+    right: 200px;
+}
+input{
+    margin: 10 0 30 0;
+}
+.country{
+    position: relative;
+    right: 450px;
+    font-weight: 400;
+}
