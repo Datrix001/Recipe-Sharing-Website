@@ -61,8 +61,10 @@
     </nav>
 
     <div class="container">
-        <h1>You have been logged out!!</h1>
+        <h1>You have been logged out!!</h1><br>
+        <p>You will be redirected in <b id="counter">10</b> second(s).</p>
         <a href="index1.php"><button>Log Back In</button></a>
     </div>
+    <script src="logout.js"></script>
 </body>
 </html>

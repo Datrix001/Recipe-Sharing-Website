@@ -74,6 +74,7 @@
             $log = false;
         }else{
             $_SESSION['UNIQUE_ID'] = $row['UNIQUE_ID']; 
+            $_SESSION['R_ID'] = $row['Sno']; 
             header("Location: afterLogin.php");
         }
         

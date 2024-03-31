@@ -75,7 +75,7 @@
             <div class="semi"></div>
             <img src="images/114-modified.png" alt="" class="about">
         </div>
-        <p class="para"><b>About Us </b><br>Welcome to Flavour Forge, where food enthusiasts unite to share, discover, and delight in the world of cooking.
+        <p class="para"><b>About Us </b><br><br>Welcome to Flavour Forge, where food enthusiasts unite to share, discover, and delight in the world of cooking.
         From seasoned chefs to kitchen novices, our platform invites everyone to explore recipes, exchange ideas, and connect
         with like-minded individuals. Founded on the belief that food has the power to create connections and moments, Flavour
         Forge is a hub for culinary inspiration and community collaboration. Join us on this delicious journey as we

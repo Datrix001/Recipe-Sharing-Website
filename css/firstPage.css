@@ -51,18 +51,13 @@ span {
 }
 .btne{
     border-radius: 30px;
-    padding:20px ;
+    padding:15px ;
     background-color: #52734D;
     border: none;
     font-family: "Anta", sans-serif;
     color: #fff;
     width: 150px;
-    box-shadow: 0px 0px 20px #52734D;
     font-size: large;
-}
-.btn-shadow{
-    border:solid #52734D ;
-    border-radius: 20px;
 }
 .background-1{
     background-image: url("../images/230.jpg");
@@ -170,6 +165,7 @@ p{
     text-align: left;
     line-height: 180%;
     padding: 10% 10%;
+    
 }
 
 .third{

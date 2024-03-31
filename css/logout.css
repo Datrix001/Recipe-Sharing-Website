@@ -44,10 +44,7 @@ span {
 h1{
     color:#52734D;
     text-align: center;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    padding-top: 100px;
+    padding-top: 40px;
 }
 .container{
 
@@ -69,4 +66,11 @@ button{
     padding: 10px 20px;
     border: solid #52734D 3px ;
     
+}
+b{
+    font-weight: 400;
+}
+p{
+    padding-left: 60px;
+    font-size: larger;
 }

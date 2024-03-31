@@ -86,10 +86,10 @@
             <div class="semi"></div>
             <img src="images/114-modified.png" alt="" class="about">
         </div>
-        <p class="para"><b>About Us </b><br>Welcome to [Your Website Name], where food enthusiasts unite to share, discover, and delight in the world of cooking.
+        <p class="para"><b>About Us </b><br><br>Welcome to Flavour Forge, where food enthusiasts unite to share, discover, and delight in the world of cooking.
         From seasoned chefs to kitchen novices, our platform invites everyone to explore recipes, exchange ideas, and connect
-        with like-minded individuals. Founded on the belief that food has the power to create connections and moments, [Your
-        Website Name] is a hub for culinary inspiration and community collaboration. Join us on this delicious journey as we
+        with like-minded individuals. Founded on the belief that food has the power to create connections and moments, Flavour
+        Forge is a hub for culinary inspiration and community collaboration. Join us on this delicious journey as we
         celebrate the joy of cooking and the richness of food culture together. Thank you for being a part of our vibrant
         community. Let's cook, create, and savor the magic of food together!</p>
     </div>
@@ -116,7 +116,8 @@
 
             </div>
         </div>
-    </div>    
+    </div>
+
     <div class="third">
         <div class="col-lg-4 px-3 pt-0 ">
             <h1 class="gghg">Contact Us</h1>
@@ -141,9 +142,10 @@
             </h3>
         </div>
     </div>
-    
 
+
+       
+    <script src="home.js"></script>  
 </body>
 
 </html>
-
