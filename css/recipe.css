@@ -1,0 +1,45 @@
+body{
+    overflow-x: hidden;
+    font-family: "Ubuntu", sans-serif  ;}
+
+span {
+    font-family: "Ubuntu", sans-serif;
+    color: #52734D;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+li {
+    color: #52734D;
+    font-size: 16px;
+    font-family: "Anta", sans-serif;
+}
+
+.active1{
+    background-color: #52734D;
+    border-radius: 20px;
+}
+
+
+.nav-link {
+    color: #52734D !important;
+    font-weight: 100;
+    font-family: "Anta", sans-serif;
+    font-size: larger;
+    cursor: pointer;
+}
+.li{
+    color: #fff !important;
+}
+
+.navbar {
+    background-color: #fff;
+    /* Background color */
+    border-bottom: solid #52734D 2px;
+
+}
+span {
+    background: linear-gradient(to right, #52734D, #ADBC9F);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; 
+}
