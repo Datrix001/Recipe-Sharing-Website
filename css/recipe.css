@@ -43,3 +43,7 @@ span {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text; 
 }
+.inst{
+    white-space: pre-wrap;
+    height: 360px;
+}

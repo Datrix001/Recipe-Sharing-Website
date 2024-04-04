@@ -13,12 +13,27 @@
     if(!$con){
         die("Connection to this database failed due to ".mysqli_connect_error());
     }
+
+    session_start();
     // echo "Success: Connection to the database established!";
     if(isset($_POST['title']) AND isset($_POST['desc'])){
+        
+        $unique_Id = $_SESSION['UNIQUE_ID'];
+        $sql = "SELECT * FROM `logintable`.`reg` WHERE  UNIQUE_ID = '{$_SESSION['UNIQUE_ID']}'";
+        $sql1 = mysqli_query($con,$sql);
+        $row = mysqli_fetch_assoc($sql1);
+
         $title = $_POST['title'];
         $desc = $_POST['desc'];
+        
+        $filename = $_FILES["img"]["name"];
+        $tempname = $_FILES["img"]["tmp_name"];
+        $folder = "images/".$filename;
+        move_uploaded_file($tempname,$folder);
+        $G_ID = $row["Sno"];
+       
 
-        $sql = "INSERT INTO `recipes` ( `title`, `description`) VALUES ('$title', '$desc')";
+        $sql = "INSERT INTO recipes ( title, description, img,G_ID) VALUES ('$title', '$desc','$folder','$G_ID')";
         
         if($con->query($sql) == true){
         // echo "Successfully Inserted";
@@ -142,66 +157,21 @@
 
     <div class="container my-3">
         <h2>Add a recipe</h2>
-        <form action ="" method = "POST">
+        <form action ="" method = "POST" enctype="multipart/form-data">
         <div class="mb-3">
             <label  class="form-label" for= "title">Recipe Name</label>
             <input type="text" class="form-control" id="title" name = "title">
-            
+        </div>
+        <div class="mb-3">
+           Recipe Images <br>
+            <input type="file" class="form-control" name = "img">
         </div>
         <div class="mb-3">
         <label for="desc" class="form-label">Instructions</label>
-        <textarea class="form-control" id="desc" name ="desc"></textarea>
+        <textarea class="form-control inst" id="desc" name ="desc"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
-
-    <div class="container">
-        
-
-        <!-- tables -->
-        <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Sno</th>
-      <th scope="col">Title</th>
-      <th scope="col">Description</th>
-      <th scope="col">Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php 
-        $sql = "SELECT * FROM `recipes`";
-        $result = mysqli_query($con, $sql);
-        $sno = 0;
-        while($row = mysqli_fetch_assoc($result)){
-            $sno = $sno +1;
-            echo "<tr>
-                    <th>".$sno."</th>
-                    <td>".$row['title']."</td>
-                    <td>".$row['description']."</td>
-                    <td><button class='btn btn-sm btn-primary edit'>Edit</button> <a href='/del'>Delete</a></td>
-                </tr>";
-        }
-        ?>
-  </tbody> 
-</table>
-    </div>
-    <script>
-        edits = document.getElementsByClassName('edit');
-        Array.from(edits).forEach((element)=>{
-            element.addEventListener("click",(e)=>{
-                console.log("edit ", );
-                tr = e.target.parentNode.parentNode;
-                title = tr.getElementsByTagName("td")[0].innerText;
-                description = tr.getElementsByTagName("td")[1].innerText;
-                console.log(title, description);
-                descEdit.value = desc;
-                titleEdit.value = title;
-                $('#editModal').modal('show');
-        
-            })
-        })
-    </script>
 </body>
 </html>

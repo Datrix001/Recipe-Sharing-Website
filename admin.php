@@ -21,7 +21,7 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel="stylesheet" href="css/profile.css">
+<link rel="stylesheet" href="css/admin.css">
 <!-- Linking Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,17 +56,20 @@
                     <a class="nav-link active" href="afterLogin.php">Home</a>
                 </li>
                 <li class="nav-item px-2 ">
-                    <a class="nav-link active" href="">Recipes</a>
+                    <a class="nav-link active " href="">Recipes</a>
                 </li>
-                <li class="nav-item  px-2 active1">
-                    <a class="nav-link active li" href="">Contact Us</a>
+                <li class="nav-item  px-2 ">
+                    <a class="nav-link active " href="">Contact Us</a>
                 </li>
                 <li class="nav-item  px-2 mt-2">
                     <a href="profile.php"><img src="images/chef1.png" alt="" class="profile"></a>
                 </li>
-                <!-- <li class="nav-item px-2 mt-2 ">
-                    <b class="size"><?php  echo $row['Name']; ?></b>
-                </li> -->
             </ul>
         </div>
     </nav>
+
+    <div class="container mt-4">
+        <h1><center>Admin Panel</center></h1>
+    </div>
+</body>
+</html>    
