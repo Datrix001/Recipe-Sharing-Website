@@ -4,9 +4,7 @@
     $username = "root";
     $password = "";
     
-    
-    
-    $con  = mysqli_connect($server,$username,$password);
+    $con  = mysqli_connect($server, $username, $password);
     session_start();
     if(!$con){
         die("Connection to this database failed due to ".mysqli_connect_error());
@@ -16,20 +14,36 @@
     $row = mysqli_fetch_assoc($result1);
     $name1 = $row['Name'];
     
-    $sql = "SELECT * FROM `logintable`.`recipes`";
-    $result = mysqli_query($con, $sql);
-    $row1 = mysqli_fetch_assoc($result);
-
-    $sql2 = "INSERT INTO `logintable`.`approved` ('Sno','Name','title','description','time','img','summary','F_ID')";
-    if($con->query($sql) == true){
-        // echo "Successfully Inserted";
-        $insert = true;
-
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Check if the "approve" button is clicked
+    if (isset($_POST['approve'])) {
+        $status = "approved";
+        $recipe_id = $_POST['recipe_id']; // Get the recipe ID from the submitted form
+        
+        // Prepare and execute the SQL query to approve the recipe with the given ID
+        $sql2 = "UPDATE `logintable`.`recipes` SET `status` = '$status' WHERE `recipe_id` = $recipe_id";
+        if (mysqli_query($con, $sql2)) {
+            // echo "Recipe approved successfully";
+            $insert = true;
+        } else {
+            echo "ERROR: $sql2 <br> " . mysqli_error($con);
+        }
     }
-    else{
-        echo "ERROR: $sql <br> $conn->error";
+    // Check if the "reject" button is clicked
+    elseif (isset($_POST['reject'])) {
+        $status = "rejected";
+        $recipe_id = $_POST['recipe_id']; // Get the recipe ID from the submitted form
+        
+        // Prepare and execute the SQL query to reject the recipe with the given ID
+        $sql2 = "UPDATE `logintable`.`recipes` SET `status` = '$status' WHERE `recipe_id` = $recipe_id";
+        if (mysqli_query($con, $sql2)) {
+            // echo "Recipe rejected successfully";
+            $insert = true;
+        } else {
+            echo "ERROR: $sql2 <br> " . mysqli_error($con);
+        }
     }
-
+}
 ?>
 
 
@@ -83,34 +97,30 @@
     </nav>
 
     <div class="container mt-4">
-        <h1><center>Admin Panel</center></h1>
-        
-        <?php
-        $sql = "SELECT * FROM `logintable`.`recipes`";
-        $result = mysqli_query($con, $sql);
-        $sno = 0;
-        $time = $row['Date_Time'];
+    <h1><center>Admin Panel</center></h1>
+    
+    <?php
+    $sql = "SELECT * FROM `logintable`.`recipes`";
+    $result = mysqli_query($con, $sql);
 
+    while ($row = mysqli_fetch_assoc($result)) {
+        // Output recipe details
+        echo "
+        <div class='first'>
+            <p><i>Title: </i>{$row['title']}</p>
+            <p><i>From: </i> {$row['Name']}</p>
+            <p><i>Description: </i>{$row['Summary']}</p>
+            <form method='POST'>
+                <input type='hidden' name='recipe_id' value='{$row['recipe_id']}'>
+                <input type='submit' class='bt' name='approve' value='Approve'>
+                <input type='submit' class='bt' name='reject' value='Reject'>
+            </form>
+        </div>";
+    }
+    ?>
 
-        while($row = mysqli_fetch_assoc($result)){
-            $sno = $sno +1;
+</div>
 
-            $nam = ucfirst($row['Name']);
-            echo "
-            <div class='first'>
-                <p><i>Title: </i>{$row['title']}</p>
-                <p><i>From: </i> {$nam}</p>
-                <p><i>Description: </i>{$row['Summary']}</p>
-                <form action="" method="post"><button class='bt' name ="approve">Approve</button>
-                <button class='bt' name ="reject">Reject</button></form>
-            </div>
-        ";
-
-        }
-                   
-            ?>
-            
-        
     </div>
 </body>
 </html>    

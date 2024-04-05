@@ -33,8 +33,8 @@
         move_uploaded_file($tempname,$folder);
         $G_ID = $row["Sno"];
         $name = $row['Name'];
-
-        $sql = "INSERT INTO recipes (Name,title, description, img, Summary ,G_ID) VALUES ('$name','$title', '$desc','$folder','$summary','$G_ID')";
+        $random_num = rand(1000000,99999999);  
+        $sql = "INSERT INTO recipes (Name,title, description, img, Summary ,G_ID,recipe_id) VALUES ('$name','$title', '$desc','$folder','$summary','$G_ID','$random_num')";
         
         if($con->query($sql) == true){
         // echo "Successfully Inserted";
