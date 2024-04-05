@@ -11,6 +11,25 @@
     if(!$con){
         die("Connection to this database failed due to ".mysqli_connect_error());
     }
+    $sql1 = "SELECT * FROM `logintable`.`reg` WHERE UNIQUE_ID = '{$_SESSION['UNIQUE_ID']}'";
+    $result1 = mysqli_query($con, $sql1);
+    $row = mysqli_fetch_assoc($result1);
+    $name1 = $row['Name'];
+    
+    $sql = "SELECT * FROM `logintable`.`recipes`";
+    $result = mysqli_query($con, $sql);
+    $row1 = mysqli_fetch_assoc($result);
+
+    $sql2 = "INSERT INTO `logintable`.`approved` ('Sno','Name','title','description','time','img','summary','F_ID')";
+    if($con->query($sql) == true){
+        // echo "Successfully Inserted";
+        $insert = true;
+
+    }
+    else{
+        echo "ERROR: $sql <br> $conn->error";
+    }
+
 ?>
 
 
@@ -41,12 +60,7 @@
 </head>
 
 <body>
-    <?php
-        $unique_Id = $_SESSION['UNIQUE_ID'];
-        $sql = "SELECT * FROM `logintable`.`reg` WHERE  UNIQUE_ID = '{$_SESSION['UNIQUE_ID']}'";
-        $sql1 = mysqli_query($con,$sql);
-        $row = mysqli_fetch_assoc($sql1);
-    ?>
+    
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg p-3 ">
         <div class="container-fluid">
@@ -70,6 +84,33 @@
 
     <div class="container mt-4">
         <h1><center>Admin Panel</center></h1>
+        
+        <?php
+        $sql = "SELECT * FROM `logintable`.`recipes`";
+        $result = mysqli_query($con, $sql);
+        $sno = 0;
+        $time = $row['Date_Time'];
+
+
+        while($row = mysqli_fetch_assoc($result)){
+            $sno = $sno +1;
+
+            $nam = ucfirst($row['Name']);
+            echo "
+            <div class='first'>
+                <p><i>Title: </i>{$row['title']}</p>
+                <p><i>From: </i> {$nam}</p>
+                <p><i>Description: </i>{$row['Summary']}</p>
+                <form action="" method="post"><button class='bt' name ="approve">Approve</button>
+                <button class='bt' name ="reject">Reject</button></form>
+            </div>
+        ";
+
+        }
+                   
+            ?>
+            
+        
     </div>
 </body>
 </html>    

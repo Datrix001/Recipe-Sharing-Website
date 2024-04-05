@@ -24,16 +24,17 @@
         $row = mysqli_fetch_assoc($sql1);
 
         $title = $_POST['title'];
-        $desc = $_POST['desc'];
-        
+        $desc = mysqli_real_escape_string($con,$_POST['desc']);
+        $summary = mysqli_real_escape_string($con,$_POST['summary']);
+
         $filename = $_FILES["img"]["name"];
         $tempname = $_FILES["img"]["tmp_name"];
         $folder = "images/".$filename;
         move_uploaded_file($tempname,$folder);
         $G_ID = $row["Sno"];
-       
+        $name = $row['Name'];
 
-        $sql = "INSERT INTO recipes ( title, description, img,G_ID) VALUES ('$title', '$desc','$folder','$G_ID')";
+        $sql = "INSERT INTO recipes (Name,title, description, img, Summary ,G_ID) VALUES ('$name','$title', '$desc','$folder','$summary','$G_ID')";
         
         if($con->query($sql) == true){
         // echo "Successfully Inserted";
@@ -165,6 +166,10 @@
         <div class="mb-3">
            Recipe Images <br>
             <input type="file" class="form-control" name = "img">
+        </div>
+        <div class="mb-3">
+             Recipe Description <br>
+            <textarea name="summary" class="form-control summ" ></textarea>
         </div>
         <div class="mb-3">
         <label for="desc" class="form-label">Instructions</label>
