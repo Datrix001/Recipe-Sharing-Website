@@ -4,6 +4,8 @@
     header("Location:index1.php");
     exit(); 
 }
+    $notf = true;
+    $not = true;
 
     $server = "localhost";
     $username = "root";
@@ -20,40 +22,20 @@
     if (!$con) {
         die("Connection to this database failed due to " . mysqli_connect_error());
     }
-    
-    if(isset($_POST["current"]) && isset($_POST["new"]) && isset($_POST["confirm"])) {
 
-        
-        
-        
-        $unique_Id = $_SESSION['UNIQUE_ID'];
-        $sql = "SELECT * FROM `logintable`.`reg` WHERE  UNIQUE_ID = '{$_SESSION['UNIQUE_ID']}'";
-        $sql1 = mysqli_query($con,$sql);
-        $row = mysqli_fetch_assoc($sql1);
-         
-        $current = $_POST["current"];
-        $new = $_POST["new"];
-        $confirm = $_POST["confirm"];   
-        
-        if ($new == $confirm){
-            if($current == $row["Password"]){
-                $sql = "UPDATE `logintable`.`reg` SET Password = '{$new}' , Confirm_Password = '{$confirm}'  WHERE UNIQUE_ID = '{$_SESSION['UNIQUE_ID']}' ";
-                
-                $pass2 = false;
-                if ($con->query($sql) === true) {
-                    $insert = true;
-                } else {
-                    echo "ERROR: $sql <br> $con->error";
-                }
-            }
-            else{
-                $pass1 = false;
-                
-            }}else{
-                $pass3 = false;
-            }
-        
-    }
+    $sql = "SELECT * FROM `logintable`.`recipes` WHERE Name = '{$_SESSION['Name']}'";
+    $result = mysqli_query($con, $sql); 
+    $sql1 = mysqli_fetch_assoc($result);
+    
+    if(!isset($sql1['status'])){
+        $notf = false;
+    }else{
+        if($sql1['status']=='rejected'){
+            $not = false;
+            $notf = true;
+    }else{
+        $not = true;
+    }}
 ?>
 <html>
 <!-- Linging favicon -->
@@ -105,59 +87,32 @@
             </ul>
         </div>
     </nav>
-    <?php
-        if(!$pass1){
-                    echo"<div class='alert alert-secondary bg-warning' role='alert'>
-                        Wrong Password Entered!!
-                    </div>";
-                    echo"<style>.alert{margin-bottom:0;}</style>";
-                    echo"<style>.container{bottom:30px;}</style>";
-            }
-        
-        if(!$pass2){
-                    echo"<div class='alert alert-secondary bg-success' role='alert'>
-                        Password Changed Successfully!!
-                    </div>";
-                    echo"<style>.alert{margin-bottom:0;}</style>";
-                    echo"<style>.container{bottom:30px;}</style>";
-            } 
-        
-        if(!$pass3){
-                    echo"<div class='alert alert-secondary bg-warning' role='alert'>
-                        Confirm Password is not same!!
-                    </div>";
-                    echo"<style>.alert{margin-bottom:0;}</style>";
-                    echo"<style>.container{bottom:30px;}</style>";
-            }    
-    ?>
+
     <div class="container">
         <div class="column1">
             
             <h2 class="name"><b>User Profile</b></h2>
             <h4 class="h4"><img src="images/user1.png" alt="" class="img">&nbsp <a href="profile1.php">User Info</a></h4>
             <h4 class="h4"><img src="images/heart1.png" alt="" class="img">&nbsp  Favourite</h4>
-            <h4 class="current"><img src="images/key.png" alt="" class="img">&nbsp Password</h4>
-            <h5 class="h4"><img src="images/bell1.png" alt="" class="img">&nbsp Notification</h4>
+            <h5 class="h4"><img src="images/key1.png" alt="" class="img">&nbsp Password</h5>
+            <h4 class="current"><img src="images/bell.png" alt="" class="img">&nbsp Notification</h4>
             <h5 class="h5"><img src="images/power.png" alt="" class="img">&nbsp<a href="logout.php">Logout</a></h5>
         </div>
         <div class ="column2">
-            <h1>Change Password</h1>
-            <form action="" method="POST">
-                    <b class="h3">Current Password</h4><br>
-                    <input type="password" name ="current"><br>
-                    <b class="h3">New Password</h4><br>
-                    <input type="password" name ="new"><br>
-                    <b class="h3">Confirm Password</h4><br>
-                    <input type="password" name ="confirm"><br>
-                    <input type="submit">
-            </form>
+            <h1><center>Notification</center></h1>
+            <?php 
+              if(!$notf){
+                    echo"<h2>No Notification Right Now.</h2>";
+            }
+
+            if (!$not){
+                echo"<h2>Your recipe was rejected</h2>";
+            }else{
+                echo"<h2>Your recipe was accepted</h2>";
+            }
+            ?>
         </div>
     </div>
 
-        
 </body>
 </html>
-
-
-
-

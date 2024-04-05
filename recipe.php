@@ -1,4 +1,10 @@
 <?php
+    
+    session_start();
+    if (!isset($_SESSION['UNIQUE_ID'])) {
+    header("Location:index1.php");
+    exit(); 
+}
 
     $insert = true;
 
@@ -14,7 +20,7 @@
         die("Connection to this database failed due to ".mysqli_connect_error());
     }
 
-    session_start();
+    
     // echo "Success: Connection to the database established!";
     if(isset($_POST['title']) AND isset($_POST['desc'])){
         

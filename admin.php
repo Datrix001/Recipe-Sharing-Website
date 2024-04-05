@@ -1,18 +1,18 @@
 <?php
-    
+    if (isset($_SESSION['UNIQUE_ID'])) {
+    header("Location:index1.php");
+    exit(); 
+}
     $server = "localhost";
     $username = "root";
     $password = "";
     
     $con  = mysqli_connect($server, $username, $password);
-    session_start();
     if(!$con){
         die("Connection to this database failed due to ".mysqli_connect_error());
     }
-    $sql1 = "SELECT * FROM `logintable`.`reg` WHERE UNIQUE_ID = '{$_SESSION['UNIQUE_ID']}'";
-    $result1 = mysqli_query($con, $sql1);
-    $row = mysqli_fetch_assoc($result1);
-    $name1 = $row['Name'];
+    
+
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if the "approve" button is clicked
@@ -45,8 +45,8 @@
     }
 }
 ?>
-
-
+<html>
+<head>
 <!-- Linging favicon -->
 <link rel="icon" href="css/cook-book.ico">
 
@@ -102,11 +102,10 @@
     <?php
     $sql = "SELECT * FROM `logintable`.`recipes`";
     $result = mysqli_query($con, $sql);
-
+    $recipeFound = false;
     while ($row = mysqli_fetch_assoc($result)) {
-        // Output recipe details
-        echo "
-        <div class='first'>
+        if (!$row['status']) {
+        echo "<div class='first'>
             <p><i>Title: </i>{$row['title']}</p>
             <p><i>From: </i> {$row['Name']}</p>
             <p><i>Description: </i>{$row['Summary']}</p>
@@ -116,7 +115,14 @@
                 <input type='submit' class='bt' name='reject' value='Reject'>
             </form>
         </div>";
+        $recipeFound = true;
     }
+}
+
+     if (!$recipeFound) {
+    echo "<h2 class ='nothing'><center>No recipe approval remaining!!</center></h2>";
+    }
+
     ?>
 
 </div>

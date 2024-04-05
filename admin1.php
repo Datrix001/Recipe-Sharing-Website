@@ -1,19 +1,5 @@
-<?php
-    session_start();
-    if (!isset($_SESSION['UNIQUE_ID'])) {
-    header("Location:index1.php");
-    exit(); 
-    }
-
-    
-    session_unset();
-    session_destroy();
-    ?>
-    <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Linging favicon -->
 <link rel="icon" href="css/cook-book.ico">
 
@@ -21,7 +7,7 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel="stylesheet" href="css/logout.css">
+<link rel="stylesheet" href="css/admin.css">
 <!-- Linking Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,29 +34,17 @@
             <a class="navbar-brand" href="#"> <span><img src="images/chef-hat.ico" alt=""> FlavorForge</span></a>
             <ul class="navbar-nav ms-lg-auto pe-xxl-3 ">
                 <li class="nav-item px-2 ">
-                    <a class="nav-link active" href="index.php">Home</a>
+                    <a class="nav-link active" href="afterLogin.php">Home</a>
                 </li>
                 <li class="nav-item px-2 ">
-                    <a class="nav-link active" href="">Recipes</a>
+                    <a class="nav-link active " href="">Recipes</a>
                 </li>
                 <li class="nav-item  px-2 ">
-                    <a class="nav-link active" href="contact.php">Contact Us</a>
+                    <a class="nav-link active " href="">Contact Us</a>
                 </li>
-                <li class="nav-item  px-2">
-                    <a class="nav-link active" href="index1.php" id ="signup">Sign Up</a>
-                </li>
-                <li class="nav-item btn-shadow px-2 ms-3">
-                    <a class="nav-link active" href="index1.php">Login</a>
+                <li class="nav-item  px-2 mt-2">
+                    <a href="profile.php"><img src="images/chef1.png" alt="" class="profile"></a>
                 </li>
             </ul>
         </div>
     </nav>
-
-    <div class="container">
-        <h1>You have been logged out!!</h1><br>
-        <p>You will be redirected in <b id="counter">10</b> second(s).</p>
-        <a href="index1.php"><button>Log Back In</button></a>
-    </div>
-    <script src="logout.js"></script>
-</body>
-</html>

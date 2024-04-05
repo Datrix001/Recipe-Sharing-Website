@@ -1,4 +1,12 @@
 <?php
+    session_start();
+    if (!isset($_SESSION['UNIQUE_ID'])) {
+    header("Location:index1.php");
+    exit(); 
+}
+
+
+
     $server = "localhost";
     $username = "root";
     $password = "";
@@ -8,7 +16,7 @@
 
     $con = mysqli_connect($server, $username, $password, $database); // Include database name here
     
-    session_start();
+    
     
     if (!$con) {
         die("Connection to this database failed due to " . mysqli_connect_error());
@@ -101,7 +109,7 @@
             <h4 class="current"><img src="images/user.png" alt="" class="img">&nbsp User Info</h4>
             <h4 class="h4"><img src="images/heart1.png" alt="" class="img">&nbsp  Favourite</h4>
             <h4 class="h4"><img src="images/key1.png" alt="" class="img">&nbsp <a href="password.php">Password</a></h4>
-            <h5 class="h4"><img src="images/bell1.png" alt="" class="img">&nbsp Notification</h4>
+            <h5 class="h4"><img src="images/bell1.png" alt="" class="img">&nbsp <a href="notification.php">Notification</a></h4>
             <h5 class="h5"><img src="images/power.png" alt="" class="img">&nbsp<a href="logout.php">Logout</a></h5>
         </div>
         <div class ="column2">

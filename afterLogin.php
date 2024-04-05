@@ -1,5 +1,10 @@
 <?php
+    session_start();
+      if (!isset($_SESSION['UNIQUE_ID'])) {
+        header("Location:index1.php");
     
+}
+
     $server = "localhost";
     $username = "root";
     $password = "";
@@ -7,7 +12,6 @@
     
     
     $con  = mysqli_connect($server,$username,$password);
-    session_start();
     if(!$con){
         die("Connection to this database failed due to ".mysqli_connect_error());
     }

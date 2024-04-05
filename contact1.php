@@ -1,3 +1,4 @@
+<html>
 <!-- Linging favicon -->
 <link rel="icon" href="css/cook-book.ico">
 

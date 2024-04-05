@@ -64,7 +64,13 @@
     }
     // echo "Success: Connection to the database established!";
         session_start();
-        $loginName = $_POST['loginName'];
+        $login = $_POST['loginName'];
+        $password = $_POST['loginPassword'];
+        
+        if($login=="admin" && $password=="admin"){
+          header("Location: admin.php");  } 
+        
+        else{$loginName = $_POST['loginName'];
         $loginPassword = $_POST['loginPassword'];
         $sql1 = "SELECT * FROM `logintable`.`reg` WHERE Name = '{$loginName}' AND Password= '{$loginPassword}'";
             
@@ -73,15 +79,22 @@
         if($row == null){
             $log = false;
         }else{
-            $_SESSION['UNIQUE_ID'] = $row['UNIQUE_ID']; 
-            $_SESSION['R_ID'] = $row['S_no']; 
+                $_SESSION['UNIQUE_ID'] = $row['UNIQUE_ID']; 
+                $_SESSION['R_ID'] = $row['S_no']; 
             $_SESSION['Name'] = $row['Name'];
             header("Location: afterLogin.php");
         }
         
         $con-> close();  
         $pass = true;
-        
+    }
+    }
+    elseif(isset($_POST['loginName']) && isset($_POST['loginPassword'])){
+       $login = $_POST['loginName'];
+       $password = $_POST['loginPassword'];
+        if($login=='admin'&& $password=='admin'){
+          header("Location: admin.php");  
+        }
     }
 
            
