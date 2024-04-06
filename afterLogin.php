@@ -1,8 +1,8 @@
 <?php
     session_start();
       if (!isset($_SESSION['UNIQUE_ID'])) {
-        header("Location:index1.php");
-    
+    header("Location:index1.php");
+    exit();
 }
 
     $server = "localhost";

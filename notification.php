@@ -4,8 +4,7 @@
     header("Location:index1.php");
     exit(); 
 }
-    $notf = true;
-    $not = true;
+    
 
     $server = "localhost";
     $username = "root";
@@ -27,15 +26,7 @@
     $result = mysqli_query($con, $sql); 
     $sql1 = mysqli_fetch_assoc($result);
     
-    if(!isset($sql1['status'])){
-        $notf = false;
-    }else{
-        if($sql1['status']=='rejected'){
-            $not = false;
-            $notf = true;
-    }else{
-        $not = true;
-    }}
+    
 ?>
 <html>
 <!-- Linging favicon -->
@@ -101,15 +92,16 @@
         <div class ="column2">
             <h1><center>Notification</center></h1>
             <?php 
-              if(!$notf){
-                    echo"<h2>No Notification Right Now.</h2>";
-            }
+            
 
-            if (!$not){
-                echo"<h2>Your recipe was rejected</h2>";
-            }else{
-                echo"<h2>Your recipe was accepted</h2>";
-            }
+                if($sql1['status']=='rejected'){
+                    echo'<h2>Your recipe was rejected</h2>';
+                }elseif($sql1['status']=='approved'){
+                    echo'<h2>Your recipe was approved</h2>';
+                }else{
+                    echo'<h2>No notification Right Now</h2>';
+                }
+
             ?>
         </div>
     </div>

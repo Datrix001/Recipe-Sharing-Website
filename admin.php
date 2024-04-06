@@ -81,13 +81,13 @@
             <a class="navbar-brand" href="#"> <span><img src="images/chef-hat.ico" alt=""> FlavorForge</span></a>
             <ul class="navbar-nav ms-lg-auto pe-xxl-3 ">
                 <li class="nav-item px-2 ">
-                    <a class="nav-link active" href="afterLogin.php">Home</a>
+                    <a class="nav-link active" href="index.php">Home</a>
                 </li>
                 <li class="nav-item px-2 ">
                     <a class="nav-link active " href="">Recipes</a>
                 </li>
                 <li class="nav-item  px-2 ">
-                    <a class="nav-link active " href="">Contact Us</a>
+                    <a class="nav-link active " href="contact1.php">Contact Us</a>
                 </li>
                 <li class="nav-item  px-2 mt-2">
                     <a href="profile.php"><img src="images/chef1.png" alt="" class="profile"></a>

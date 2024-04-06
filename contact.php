@@ -69,9 +69,7 @@
                 <li class="nav-item  px-2 mt-2">
                     <a href="profile1.php"><img src="images/chef1.png" alt="" class="profile"></a>
                 </li>
-                <!-- <li class="nav-item px-2 mt-2 ">
-                    <b class="size"><?php  echo $row['Name']; ?></b>
-                </li> -->
+                
             </ul>
         </div>
     </nav>

@@ -10,16 +10,10 @@ span {
 }
 
 li {
-    color: #52734D;
+    color: #52734D !important;
     font-size: 16px;
     font-family: "Anta", sans-serif;
 }
-
-.active1{
-    background-color: #52734D;
-    border-radius: 20px;
-}
-
 
 .nav-link {
     color: #52734D !important;
@@ -28,10 +22,13 @@ li {
     font-size: larger;
     cursor: pointer;
 }
+.active1{
+    background-color: #52734D;
+    border-radius: 20px;
+}
 .li{
     color: #fff !important;
 }
-
 .navbar {
     background-color: #fff;
     /* Background color */
@@ -42,6 +39,10 @@ span {
     background: linear-gradient(to right, #52734D, #ADBC9F);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text; 
+}
+
+.profile{
+    height: 30px;
 }
 .inst{
     white-space: pre-wrap;

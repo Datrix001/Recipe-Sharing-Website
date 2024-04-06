@@ -137,7 +137,7 @@
             <h4 class="h4"><img src="images/user1.png" alt="" class="img">&nbsp <a href="profile1.php">User Info</a></h4>
             <h4 class="h4"><img src="images/heart1.png" alt="" class="img">&nbsp  Favourite</h4>
             <h4 class="current"><img src="images/key.png" alt="" class="img">&nbsp Password</h4>
-            <h5 class="h4"><img src="images/bell1.png" alt="" class="img">&nbsp Notification</h4>
+            <h5 class="h4"><img src="images/bell1.png" alt="" class="img"><a href="notification.php">&nbsp Notification</a></h4>
             <h5 class="h5"><img src="images/power.png" alt="" class="img">&nbsp<a href="logout.php">Logout</a></h5>
         </div>
         <div class ="column2">

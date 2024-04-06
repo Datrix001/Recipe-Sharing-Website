@@ -19,17 +19,6 @@ document.querySelector('#sd').addEventListener("click", () => {
   }
 });
 
-document.querySelector(".signup").addEventListener("click",()=>{
-  document.querySelector(".back1").classList.add("active2");
-  document.querySelector(".lin1").classList.add("active3");
-  document.querySelector(".back").classList.remove("active2");
-  document.querySelector(".lin").classList.remove("active3");
-});
 
-document.querySelector(".signup").addEventListener("click",()=>{
-  if(document.querySelector(".signup").innerHTML == "Login"){
-  document.querySelector(".back1").classList.remove("active2");
-  document.querySelector(".lin1").classList.remove("active3");
-  document.querySelector(".back").classList.add("active2");
-  document.querySelector(".lin").classList.add("active3");}
-});
+
+ 

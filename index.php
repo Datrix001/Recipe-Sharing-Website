@@ -50,9 +50,7 @@
                 <li class="nav-item  px-2 ">
                     <a class="nav-link active" href="contact1.php">Contact Us</a>
                 </li>
-                <li class="nav-item  px-2">
-                    <a class="nav-link active" href="index1.php"  id ="sign"><i >Sign Up</i></a>
-                </li>
+                
                 <li class="nav-item btn-shadow px-2 ms-3">
                     <a class="nav-link active" href="index1.php" >Login</a>
                 </li>
