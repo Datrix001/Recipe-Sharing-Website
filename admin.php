@@ -15,26 +15,26 @@
 
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Check if the "approve" button is clicked
+    
     if (isset($_POST['approve'])) {
         $status = "approved";
-        $recipe_id = $_POST['recipe_id']; // Get the recipe ID from the submitted form
+        $recipe_id = $_POST['recipe_id']; 
         
-        // Prepare and execute the SQL query to approve the recipe with the given ID
+        
         $sql2 = "UPDATE `logintable`.`recipes` SET `status` = '$status' WHERE `recipe_id` = $recipe_id";
         if (mysqli_query($con, $sql2)) {
-            // echo "Recipe approved successfully";
+           
             $insert = true;
         } else {
             echo "ERROR: $sql2 <br> " . mysqli_error($con);
         }
     }
-    // Check if the "reject" button is clicked
+   
     elseif (isset($_POST['reject'])) {
         $status = "rejected";
-        $recipe_id = $_POST['recipe_id']; // Get the recipe ID from the submitted form
+        $recipe_id = $_POST['recipe_id']; 
         
-        // Prepare and execute the SQL query to reject the recipe with the given ID
+        
         $sql2 = "UPDATE `logintable`.`recipes` SET `status` = '$status' WHERE `recipe_id` = $recipe_id";
         if (mysqli_query($con, $sql2)) {
             // echo "Recipe rejected successfully";
@@ -68,7 +68,7 @@
     rel="stylesheet">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
 <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
 <title>FlavorForge</title>
 </head>

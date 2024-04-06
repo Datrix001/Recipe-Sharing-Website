@@ -1,0 +1,78 @@
+body{
+    overflow-x: hidden;
+    font-family: "Ubuntu", sans-serif  ;}
+
+span {
+    font-family: "Ubuntu", sans-serif;
+    color: #52734D;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+li {
+    color: #52734D !important;
+    font-size: 16px;
+    font-family: "Anta", sans-serif;
+}
+
+.nav-link {
+    color: #52734D !important;
+    font-weight: 100;
+    font-family: "Anta", sans-serif;
+    font-size: larger;
+    cursor: pointer;
+}
+.active1{
+    background-color: #52734D;
+    border-radius: 20px;
+}
+.li{
+    color: #fff !important;
+}
+.navbar {
+    background-color: #fff;
+    /* Background color */
+    border-bottom: solid #52734D 2px;
+
+}
+span {
+    background: linear-gradient(to right, #52734D, #ADBC9F);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; 
+}
+
+.profile{
+    height: 30px;
+}
+h1{
+    margin-top: 30px;
+}
+.first{
+    margin-bottom: 10px;
+    border-top: 2px solid gray;
+    padding-bottom: 5px;
+    border-bottom: 2px solid gray; 
+    display: flex;
+    /* align-items: center; */
+
+}
+p{
+    margin-bottom: 0px;
+}
+i{
+    color: gray;
+}
+.nothing{
+    color: gray;
+    margin-top: 100px;
+    
+}
+#img-con {
+    height: 150px;
+}
+.img{
+    width: auto;
+    height: 100%;
+    border-radius: 10px;
+    margin: 2px;
+}

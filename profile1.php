@@ -107,7 +107,7 @@
             
             <h2 class="name"><b>User Profile</b></h2>
             <h4 class="current"><img src="images/user.png" alt="" class="img">&nbsp User Info</h4>
-            <h4 class="h4"><img src="images/heart1.png" alt="" class="img">&nbsp  Favourite</h4>
+            <h4 class="h4"><img src="images/heart1.png" alt="" class="img"><a href="favourite.php">&nbsp  Favourite</a></h4>
             <h4 class="h4"><img src="images/key1.png" alt="" class="img">&nbsp <a href="password.php">Password</a></h4>
             <h5 class="h4"><img src="images/bell1.png" alt="" class="img">&nbsp <a href="notification.php">Notification</a></h4>
             <h5 class="h5"><img src="images/power.png" alt="" class="img">&nbsp<a href="logout.php">Logout</a></h5>

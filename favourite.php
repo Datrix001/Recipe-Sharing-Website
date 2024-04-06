@@ -21,39 +21,6 @@
         die("Connection to this database failed due to " . mysqli_connect_error());
     }
     
-    if(isset($_POST["current"]) && isset($_POST["new"]) && isset($_POST["confirm"])) {
-
-        
-        
-        
-        $unique_Id = $_SESSION['UNIQUE_ID'];
-        $sql = "SELECT * FROM `logintable`.`reg` WHERE  UNIQUE_ID = '{$_SESSION['UNIQUE_ID']}'";
-        $sql1 = mysqli_query($con,$sql);
-        $row = mysqli_fetch_assoc($sql1);
-         
-        $current = $_POST["current"];
-        $new = $_POST["new"];
-        $confirm = $_POST["confirm"];   
-        
-        if ($new == $confirm){
-            if($current == $row["Password"]){
-                $sql = "UPDATE `logintable`.`reg` SET Password = '{$new}' , Confirm_Password = '{$confirm}'  WHERE UNIQUE_ID = '{$_SESSION['UNIQUE_ID']}' ";
-                
-                $pass2 = false;
-                if ($con->query($sql) === true) {
-                    $insert = true;
-                } else {
-                    echo "ERROR: $sql <br> $con->error";
-                }
-            }
-            else{
-                $pass1 = false;
-                
-            }}else{
-                $pass3 = false;
-            }
-        
-    }
 ?>
 <html>
 <!-- Linging favicon -->
@@ -63,7 +30,7 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel="stylesheet" href="css/password.css">
+<link rel="stylesheet" href="css/favourite.css">
 <!-- Linking Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -135,22 +102,43 @@
             
             <h2 class="name"><b>User Profile</b></h2>
             <h4 class="h4"><img src="images/user1.png" alt="" class="img">&nbsp <a href="profile1.php">User Info</a></h4>
-            <h4 class="h4"><img src="images/heart1.png" alt="" class="img"><a href="favourite.php">&nbsp  Favourite</a></h4>
-            <h4 class="current"><img src="images/key.png" alt="" class="img">&nbsp Password</h4>
+            <h4 class="current"><img src="images/love.png" alt="" class="img">&nbsp  Favourite</h4>
+            <h4 class="h4"><img src="images/key1.png" alt="" class="img"><a href="password.php">&nbsp Password</a></h4>
             <h5 class="h4"><img src="images/bell1.png" alt="" class="img"><a href="notification.php">&nbsp Notification</a></h4>
             <h5 class="h5"><img src="images/power.png" alt="" class="img">&nbsp<a href="logout.php">Logout</a></h5>
         </div>
         <div class ="column2">
-            <h1>Change Password</h1>
-            <form action="" method="POST">
-                    <b class="h3">Current Password</h4><br>
-                    <input type="password" name ="current"><br>
-                    <b class="h3">New Password</h4><br>
-                    <input type="password" name ="new"><br>
-                    <b class="h3">Confirm Password</h4><br>
-                    <input type="password" name ="confirm"><br>
-                    <input type="submit">
-            </form>
+            <h1>Favourites</h1>
+            <?php
+            $sql = "SELECT * FROM `logintable`.`favourite` WHERE Name = '{$_SESSION['Name']}'";
+            $result = mysqli_query($con,$sql);
+            if (!$result) {
+            die("Error in SQL query: " . mysqli_error($con));
+            }
+           
+
+
+             while ($row = mysqli_fetch_assoc($result)) {
+        echo "<div class='first'>
+        <div id='con'>
+            <p><i>Title: </i>{$row['title']}</p>
+            <p><i>From: </i> {$row['Name']}</p>
+              
+            <p><i>Description: </i>{$row['description']}</p>
+            
+            </div>
+            <div id='imga-con'>
+            <img src='{$row['img']}' class ='imga'>
+            </div>
+            
+             
+            
+        </div>";
+        
+    }
+
+
+            ?>
         </div>
     </div>
 

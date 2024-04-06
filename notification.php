@@ -2,7 +2,7 @@
     session_start();
    if (!isset($_SESSION['UNIQUE_ID'])) {
     header("Location:index1.php");
-    exit(); 
+   
 }
     
 
@@ -24,7 +24,7 @@
 
     $sql = "SELECT * FROM `logintable`.`recipes` WHERE Name = '{$_SESSION['Name']}'";
     $result = mysqli_query($con, $sql); 
-    $sql1 = mysqli_fetch_assoc($result);
+    
     
     
 ?>
@@ -84,27 +84,36 @@
             
             <h2 class="name"><b>User Profile</b></h2>
             <h4 class="h4"><img src="images/user1.png" alt="" class="img">&nbsp <a href="profile1.php">User Info</a></h4>
-            <h4 class="h4"><img src="images/heart1.png" alt="" class="img">&nbsp  Favourite</h4>
-            <h5 class="h4"><img src="images/key1.png" alt="" class="img">&nbsp Password</h5>
+            <h4 class="h4"><img src="images/heart1.png" alt="" class="img"><a href="favourite.php">&nbsp  Favourite</a></h4>
+            <h4 class="h4"><img src="images/key1.png" alt="" class="img"><a href="password.php">&nbsp Password</a></h4>
             <h4 class="current"><img src="images/bell.png" alt="" class="img">&nbsp Notification</h4>
             <h5 class="h5"><img src="images/power.png" alt="" class="img">&nbsp<a href="logout.php">Logout</a></h5>
         </div>
         <div class ="column2">
             <h1><center>Notification</center></h1>
             <?php 
-            
-
-                if($sql1['status']=='rejected'){
-                    echo'<h2>Your recipe was rejected</h2>';
-                }elseif($sql1['status']=='approved'){
-                    echo'<h2>Your recipe was approved</h2>';
-                }else{
-                    echo'<h2>No notification Right Now</h2>';
+           if (mysqli_num_rows($result) > 0) {
+            $sno = 0; 
+            while ($sql1 = mysqli_fetch_assoc($result)) {
+                $sno = $sno +1;
+                if ($sql1['status'] == 'rejected') {
+                    echo '<h2>' . $sno . '. Your recipe ' . $sql1['title'] . ' was rejected</h2><br>';
+                } elseif ($sql1['status'] == 'approved') {
+                    echo '<h2>' . $sno . '. Your recipe ' . $sql1['title'] . ' was approved</h2><br>';
+                } else {
+                    echo '<h2>' . $sno . '. No notification for ' . $sql1['title'] . ' Right Now</h2>';
                 }
-
+            }
+    } else {
+        
+        echo '<h2>No notification Right Now</h2>';
+    }
+        
             ?>
         </div>
     </div>
 
 </body>
 </html>
+
+

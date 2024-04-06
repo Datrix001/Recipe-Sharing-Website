@@ -64,7 +64,7 @@
                 <h1>Indulge in delicious dishes, each bite a culinary delight.</h1>
             </div>
             <div class="px-5 py-3">
-                <button class="btne">Try It Out</button>
+                <button class="btne"><a href="recipe1.php">Try It Out</a></button>
             </div>
         </div>
     </div>
