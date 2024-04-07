@@ -61,7 +61,7 @@
                     <a class="nav-link active" href="afterLogin.php">Home</a>
                 </li>
                 <li class="nav-item px-2 ">
-                    <a class="nav-link active" href="">Recipes</a>
+                    <a class="nav-link active" href="recipe1.php">Recipes</a>
                 </li>
                 <li class="nav-item  px-2 active1">
                     <a class="nav-link active li" href="">Contact Us</a>

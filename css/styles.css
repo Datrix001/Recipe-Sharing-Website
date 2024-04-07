@@ -199,3 +199,11 @@ a{
 a:hover{
     color:#fff;
 }
+
+.linked{
+     text-decoration: none;
+     color: black;
+}
+.linked:hover{
+    color:black;
+}

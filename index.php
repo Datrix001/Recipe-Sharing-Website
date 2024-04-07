@@ -45,7 +45,7 @@
                     <a class="nav-link active li" href="">Home</a>
                 </li>
                 <li class="nav-item px-2 ">
-                    <a class="nav-link active" href="">Recipes</a>
+                    <a class="nav-link active" href="recipe1.php">Recipes</a>
                 </li>
                 <li class="nav-item  px-2 ">
                     <a class="nav-link active" href="contact1.php">Contact Us</a>
@@ -87,21 +87,21 @@
         <h3>recipes are sure to impress.</h3>
         
         <div class="boxing">
-            <div class="ggdf">
+            <a href="recipe1.php" class="linked"><div class="ggdf">
                 <img src="images/99.webp" alt="" class="imgd">
-                <p><b class="hen menu">Spaghetti Carbonara</b><br><h3> A classic Italian pasta dish made with spaghetti, eggs, <br>pancetta or bacon, cheese, and black pepper.</h3></p>
+                <p><b class="hen menu"><a href="" class="linked">Spaghetti Carbonara</a></b><br><h3> A classic Italian pasta dish made with spaghetti, eggs, <br>pancetta or bacon, cheese, and black pepper.</h3></p>
                 
             </div>
-            <div class="ggdf">
+            <a href="recipe1.php" class="linked"><div class="ggdf">
                 <img src="images/100.webp" alt="" class="imgd">
                 <p><b class="hen menu">Grilled Cheese Sandwich</b><br><h3>A comfort food favorite made with bread, cheese, <br>and butter, toasted until golden brown and gooey</h3></p>
 
-            </div>
-            <div class="ggdf">
+            </div></a>
+            <a href="recipe1.php" class="linked"><div class="ggdf">
                 <img src="images/101.webp" alt="" class="imgd">
-                <p><b class="hen menu">Chocolate Chip Cookies</b><br><h3> A beloved dessert consisting of butter, sugar, eggs,<br> flour, and chocolate chips, baked until soft and chewy.</h3></p>
+                <p><b class="hen menu"><a href="" class="linked">Chocolate Chip Cookies</a></b><br><h3> A beloved dessert consisting of butter, sugar, eggs,<br> flour, and chocolate chips, baked until soft and chewy.</h3></p>
 
-            </div>
+            </div></a>
         </div>
     </div>
 

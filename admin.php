@@ -12,6 +12,7 @@
         die("Connection to this database failed due to ".mysqli_connect_error());
     }
     
+    $recipeFound = false;
 
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -84,10 +85,10 @@
                     <a class="nav-link active" href="index.php">Home</a>
                 </li>
                 <li class="nav-item px-2 ">
-                    <a class="nav-link active " href="">Recipes</a>
+                    <a class="nav-link active " href="recipe1.php">Recipes</a>
                 </li>
                 <li class="nav-item  px-2 ">
-                    <a class="nav-link active " href="contact1.php">Contact Us</a>
+                    <a class="nav-link active " href="contact.php">Contact Us</a>
                 </li>
                 <li class="nav-item  px-2 mt-2">
                     <a href="profile.php"><img src="images/chef1.png" alt="" class="profile"></a>
@@ -100,12 +101,13 @@
     <h1><center>Admin Panel</center></h1>
     
     <?php
-    $sql = "SELECT * FROM `logintable`.`recipes`";
+     $sql = "SELECT * FROM `logintable`.`recipes`";
     $result = mysqli_query($con, $sql);
     $recipeFound = false;
     while ($row = mysqli_fetch_assoc($result)) {
         if (!$row['status']) {
-        echo "<div class='first'>
+            $recipeFound = true;
+        echo "<a href='admin1.php?recipe_id={$row['recipe_id']}'><div class='first'>
             <p><i>Title: </i>{$row['title']}</p>
             <p><i>From: </i> {$row['Name']}</p>
             <p><i>Description: </i>{$row['Summary']}</p>
@@ -115,11 +117,10 @@
                 <input type='submit' class='bt' name='reject' value='Reject'>
             </form>
         </div>";
-        $recipeFound = true;
     }
-}
 
-     if (!$recipeFound) {
+    }
+    if (!$recipeFound) {
     echo "<h2 class ='nothing'><center>No recipe approval remaining!!</center></h2>";
     }
 

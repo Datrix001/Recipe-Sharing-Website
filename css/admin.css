@@ -48,7 +48,14 @@ span {
 .profile{
     height: 30px;
 }
-
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+    color: black;
+}
 .first{
     margin-bottom: 10px;
     border-top: 2px solid gray;

@@ -36,7 +36,7 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel="stylesheet" href="css/password.css">
+<link rel="stylesheet" href="css/notification.css">
 <!-- Linking Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +66,7 @@
                     <a class="nav-link active" href="afterLogin.php">Home</a>
                 </li>
                 <li class="nav-item px-2 ">
-                    <a class="nav-link active" href="">Recipes</a>
+                    <a class="nav-link active" href="recipe1.php">Recipes</a>
                 </li>
                 <li class="nav-item  px-2 ">
                     <a class="nav-link active" href="contact.php">Contact Us</a>
@@ -97,11 +97,11 @@
             while ($sql1 = mysqli_fetch_assoc($result)) {
                 $sno = $sno +1;
                 if ($sql1['status'] == 'rejected') {
-                    echo '<h2>' . $sno . '. Your recipe ' . $sql1['title'] . ' was rejected</h2><br>';
+                    echo '<h2 class=h2>' . $sno . '. Your recipe ' . $sql1['title'] . ' was rejected</h2><br>';
                 } elseif ($sql1['status'] == 'approved') {
-                    echo '<h2>' . $sno . '. Your recipe ' . $sql1['title'] . ' was approved</h2><br>';
+                    echo '<h2 class=h2>' . $sno . '. Your recipe ' . $sql1['title'] . ' was approved</h2><br>';
                 } else {
-                    echo '<h2>' . $sno . '. No notification for ' . $sql1['title'] . ' Right Now</h2>';
+                    echo '<h2 class=h2>' . $sno . '. No notification for ' . $sql1['title'] . ' Right Now</h2>';
                 }
             }
     } else {

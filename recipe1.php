@@ -93,7 +93,7 @@
                     <a class="nav-link active li" href="">Recipes</a>
                 </li>
                 <li class="nav-item  px-2 ">
-                    <a class="nav-link active" href="contact1.php">Contact Us</a>
+                    <a class="nav-link active" href="contact.php">Contact Us</a>
                 </li>
                 <li class="nav-item  px-2 mt-2">
                     <a href="profile1.php"><img src="images/chef1.png" alt="" class="profile"></a>
@@ -108,28 +108,26 @@
     $result = mysqli_query($con, $sql);
     
     while ($row = mysqli_fetch_assoc($result)) {
-        echo "<div class='first'>
+        echo "<a href='recipe2.php?recipe_id={$row['recipe_id']}'><div class='first'>
         <div id='con'>
-            <p><i>Title: </i>{$row['title']}</p>
-            <p><i>From: </i> {$row['Name']}</p>
+                <p><i>Title: </i>{$row['title']}</p>
+                <p><i>From: </i> {$row['Name']}</p>
               
-            <p><i>Description: </i>{$row['Summary']}</p>
-            <form  method='post'>
-                <input type='hidden' name='recipe_id' value='{$row['recipe_id']} '>
-                <input type='submit' value='+ Favourites' name = 'fav'>
-            </form>
+                <p><i>Description: </i>{$row['Summary']}</p>
+                <form  method='post'>
+                    <input type='hidden' name='recipe_id' value='{$row['recipe_id']} '>
+                    <input type='submit' value='Favourite' name = 'fav' class = 'fav'>
+                </form>
             </div>
             <div id='img-con'>
             <img src='{$row['img']}' class ='img'>
             </div>
             
-        </div>";
+        </div></a>";
         
     }
-
-
-
     ?>
+    <a href="recipe.php" class='diff'><center><button class="sender">Add your own recipe</button></center></a>
     </div>
 </body>
 </html>

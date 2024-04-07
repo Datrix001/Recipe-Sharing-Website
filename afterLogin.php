@@ -15,6 +15,8 @@
     if(!$con){
         die("Connection to this database failed due to ".mysqli_connect_error());
     }
+
+    
 ?>
 
 
@@ -45,12 +47,6 @@
 </head>
 
 <body>
-    <?php
-        $unique_Id = $_SESSION['UNIQUE_ID'];
-        $sql = "SELECT * FROM `logintable`.`reg` WHERE  UNIQUE_ID = '{$_SESSION['UNIQUE_ID']}'";
-        $sql1 = mysqli_query($con,$sql);
-        $row = mysqli_fetch_assoc($sql1);
-    ?>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg p-3 ">
         <div class="container-fluid">
@@ -60,7 +56,7 @@
                     <a class="nav-link active li" href="">Home</a>
                 </li>
                 <li class="nav-item px-2 ">
-                    <a class="nav-link active" href="">Recipes</a>
+                    <a class="nav-link active" href="recipe1.php">Recipes</a>
                 </li>
                 <li class="nav-item  px-2 ">
                     <a class="nav-link active" href="contact.php">Contact Us</a>
@@ -68,9 +64,6 @@
                 <li class="nav-item  px-2 mt-2">
                     <a href="profile1.php"><img src="images/chef1.png" alt="" class="profile"></a>
                 </li>
-                <!-- <li class="nav-item px-2 mt-2 ">
-                    <b class="size"><?php  echo $row['Name']; ?></b>
-                </li> -->
             </ul>
         </div>
     </nav>
@@ -104,22 +97,29 @@
         <h3>recipes are sure to impress.</h3>
         
         <div class="boxing">
-            <div class="ggdf">
-                <img src="images/99.webp" alt="" class="imgd">
-                <p><b class="hen menu">Spaghetti Carbonara</b><br><h3> A classic Italian pasta dish made with spaghetti, eggs, <br>pancetta or bacon, cheese, and black pepper.</h3></p>
-                
-            </div>
-            <div class="ggdf">
-                <img src="images/100.webp" alt="" class="imgd">
-                <p><b class="hen menu">Grilled Cheese Sandwich</b><br><h3>A comfort food favorite made with bread, cheese, <br>and butter, toasted until golden brown and gooey</h3></p>
+       
 
-            </div>
             <div class="ggdf">
-                <img src="images/101.webp" alt="" class="imgd">
-                <p><b class="hen menu">Chocolate Chip Cookies</b><br><h3> A beloved dessert consisting of butter, sugar, eggs,<br> flour, and chocolate chips, baked until soft and chewy.</h3></p>
-
+                <a href="recipe1.php" class="linked">
+                    <img src="images/99.webp" class="imgd">
+                    <p><b class="hen menu"><a href="" class="linked">Spaghetti Carbonara</a></b><br><h3> A classic Italian pasta dish made with spaghetti, eggs, <br>pancetta or bacon, cheese, and black pepper.</h3></p>
+                </a>
             </div>
-        </div>
+
+            <div class="ggdf">
+                <a href="recipe1.php" class="linked">
+                    <img src="images/100.webp" alt="" class="imgd">
+                    <p><b class="hen menu"><a href="" class="linked">Grilled Cheese Sandwich</a></b><br><h3>A comfort food favorite made with bread, cheese, <br>and butter, toasted until golden brown and gooey</h3></p>
+                </a>
+            </div>
+
+            <div class="ggdf">
+                <a href="recipe1.php" class="linked">
+                    <img src="images/101.webp" alt="" class="imgd">
+                    <p><b class="hen menu"><a href="" class="linked">Chocolate Chip Cookies</a></b><br><h3> A beloved dessert consisting of butter, sugar, eggs,<br> flour, and chocolate chips, baked until soft and chewy.</h3></p>
+                </a>
+            </div>
+            
     </div>
 
     <div class="third">

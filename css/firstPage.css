@@ -196,3 +196,11 @@ p{
 p{
     text-align: left;
 }
+
+.linked{
+     text-decoration: none;
+     color: black;
+}
+.linked:hover{
+    color:black;
+}
